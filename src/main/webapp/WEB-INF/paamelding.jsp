@@ -63,7 +63,8 @@ input[type="password"].mediumPassword+span::before {
 			</div>
 			<div>
 				<label for="etternavn">Etternavn:</label> <input required
-					type="text" name="etternavn" pattern="^[A-ZÆØÅ][A-ZÆØÅa-zæøå0-9- ]{3,19}$"
+					type="text" name="etternavn"
+					pattern="^[A-ZÆØÅ][A-ZÆØÅa-zæøå0-9- ]{3,19}$"
 					title="Etternavn må starte med en STOR bokstav, så små"
 					value="<c:out value = "${etternavn}"/>" /><span></span> <font
 					color="red"><c:out value="${feilEtternavn}" /></font>
@@ -78,19 +79,22 @@ input[type="password"].mediumPassword+span::before {
 			<div>
 				<label for="password">Passord:</label> <input id="pass1" required
 					type="password" name="passord"
+					title="Passord må innholde stor bokstav, liten bokstav, tall, spesial tegn og være lengre enn 8"
 					value="<c:out value = "${passord1}"/>" /><span></span> <font
 					color="red"><c:out value="${feilPassord1}" /></font>
 			</div>
 			<div>
 				<label for="passordRepetert">Passord repetert:</label> <input
-					id="pass2" required type="password" name="passordRepetert"
+					id="pass2" required type="password" name="passordRepetert" 
+					title="Passordet må være likt det over"
 					value="<c:out value = "${passord2}"/>" /><span></span> <font
 					color="red"><c:out value="${feilPassord2}" /></font>
 			</div>
 			<div>
-				<label for="kjonn">Kjønn:</label> 
-				<input type="radio" name="kjonn" value="M" ${kjonn.equals("M") ? 'checked' : ''} />mann 
-				<input type="radio" name="kjonn" value="K" ${kjonn.equals("M") ? '' : 'checked'}/>kvinne
+				<label for="kjonn">Kjønn:</label> <input type="radio" name="kjonn"
+					value="M" ${kjonn.equals("M") ? 'checked' : ''} />mann <input
+					type="radio" name="kjonn" value="K"
+					${kjonn.equals("M") ? '' : 'checked'} />kvinne
 
 			</div>
 			<div>

@@ -18,10 +18,14 @@ class ValidatorTest {
         String navn4 = "jhonny";
         String navn5 = "Harald-hansen";
         String navn6 = "Hans hansen";
+        String navn7 = "Daniel Gangsøy";
+        String navn8 = "Gangsøy";
         
         assertTrue(Validator.isGyldigName(navn1));
         assertTrue(Validator.isGyldigName(navn2));
         assertTrue(Validator.isGyldigName(navn3));
+        assertTrue(Validator.isGyldigName(navn7));
+        assertTrue(Validator.isGyldigName(navn8));
         
         assertFalse(Validator.isGyldigName(navn4));
         assertFalse(Validator.isGyldigName(navn5));
